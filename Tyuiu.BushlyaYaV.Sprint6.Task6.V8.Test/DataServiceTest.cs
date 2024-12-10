@@ -1,5 +1,4 @@
-﻿
-using Tyuiu.BushlyaYaV.Sprint6.Task6.V8.Lib;
+﻿using Tyuiu.BushlyaYaV.Sprint6.Task6.V8.Lib;
 
 namespace Tyuiu.BushlyaYaV.Sprint6.Task6.V8.Test
 {
