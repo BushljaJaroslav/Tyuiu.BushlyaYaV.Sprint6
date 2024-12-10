@@ -3,24 +3,37 @@ namespace Tyuiu.BushlyaYaV.Sprint6.Task7.V29.Lib
 {
     public class DataService : ISprint6Task7V29
     {
-        public int[,] GetMatrix(int[,] matrix)
-        {
-            int rows = matrix.GetLength(0);
-            int cols = matrix.GetLength(1);
-
-            for (int i = 0; i < cols; i++)
-            {
-                if (matrix[4, i] >= -5 && matrix[4, i] <= 10)
-                {
-                    matrix[4, i] = 99;
-                }
-            }
-            return matrix;
-        }
-
         public int[,] GetMatrix(string path)
         {
-            throw new NotImplementedException();
+            string fileData = File.ReadAllText(path);
+            fileData = fileData.Replace('\n', '\r');
+            string[] lines = fileData.Split(new char[] { '\r' }, StringSplitOptions.RemoveEmptyEntries);
+
+
+            int rows = lines.Length;
+            int columns = lines[0].Split(';').Length;
+            int[,] arrayValues = new int[rows, columns];
+
+            for (int i = 0; i < rows; i++)
+            {
+                string[] line_r = lines[i].Split(';');
+                for (int j = 0; j < columns; j++)
+                {
+                    arrayValues[i, j] = Convert.ToInt32(line_r[j]);
+                }
+            }
+
+            for (int i = 0; i < rows; i++)
+            {
+                for (int j = 0; j < columns; j++)
+                {
+                    if (arrayValues[4, j] >= -5 && arrayValues[4, j] <= 10)
+                    {
+                        arrayValues[4, j] = 99;
+                    }
+                }
+            }
+            return arrayValues;
         }
     }
 }
