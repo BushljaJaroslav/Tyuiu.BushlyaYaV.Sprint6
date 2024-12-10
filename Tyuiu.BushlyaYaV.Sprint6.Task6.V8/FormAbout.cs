@@ -16,5 +16,15 @@ namespace Tyuiu.BushlyaYaV.Sprint6.Task6.V8
         {
             InitializeComponent();
         }
+
+        private void labelInfo_BYV_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonOK_BYV_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

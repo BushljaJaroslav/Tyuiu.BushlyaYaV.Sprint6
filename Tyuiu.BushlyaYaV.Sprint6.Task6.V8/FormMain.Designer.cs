@@ -43,7 +43,7 @@
             groupBoxInfoEnter_BYV = new GroupBox();
             textBoxIn_BYV = new TextBox();
             openFileDialogTask_BYV = new OpenFileDialog();
-            toolTip1 = new ToolTip(components);
+            toolTipHelp_BYV = new ToolTip(components);
             panelTools_BYV.SuspendLayout();
             panelTask_BYV.SuspendLayout();
             groupBoxTask_BYV.SuspendLayout();
@@ -71,6 +71,7 @@
             buttonFormAbaut_BYV.Size = new Size(75, 54);
             buttonFormAbaut_BYV.TabIndex = 2;
             buttonFormAbaut_BYV.Text = "button1";
+            toolTipHelp_BYV.SetToolTip(buttonFormAbaut_BYV, "Нажмите, чтобы узнать о разработчике программы");
             buttonFormAbaut_BYV.UseVisualStyleBackColor = true;
             // 
             // buttonOutput_BYV
@@ -80,6 +81,7 @@
             buttonOutput_BYV.Size = new Size(75, 54);
             buttonOutput_BYV.TabIndex = 1;
             buttonOutput_BYV.Text = "buttonOutput_BYV";
+            toolTipHelp_BYV.SetToolTip(buttonOutput_BYV, "Провести действие и вывести результат");
             buttonOutput_BYV.UseVisualStyleBackColor = true;
             // 
             // buttonFindFile_BYV
@@ -89,6 +91,7 @@
             buttonFindFile_BYV.Size = new Size(75, 54);
             buttonFindFile_BYV.TabIndex = 0;
             buttonFindFile_BYV.Text = "button1";
+            toolTipHelp_BYV.SetToolTip(buttonFindFile_BYV, "Выбрать файл для вводных данных");
             buttonFindFile_BYV.UseVisualStyleBackColor = true;
             // 
             // panelTask_BYV
@@ -218,6 +221,6 @@
         private Button buttonFormAbaut_BYV;
         private Button buttonOutput_BYV;
         private OpenFileDialog openFileDialogTask_BYV;
-        private ToolTip toolTip1;
+        private ToolTip toolTipHelp_BYV;
     }
 }
