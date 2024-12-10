@@ -1,4 +1,5 @@
 ﻿
+using System.Text.RegularExpressions;
 using tyuiu.cources.programming.interfaces.Sprint6;
 namespace Tyuiu.BushlyaYaV.Sprint6.Task6.V8.Lib
 {
@@ -6,26 +7,22 @@ namespace Tyuiu.BushlyaYaV.Sprint6.Task6.V8.Lib
     {
         public string CollectTextFromFile(string path)
         {
-            string resStr = "";
-            using (StreamReader reader = new StreamReader(path))
+            string result = string.Empty;
+
+            if (File.Exists(path))
             {
-                while (!reader.EndOfStream)
+                string content = File.ReadAllText(path);
+
+                string pattern = @"\b\w*z\w*\b";
+                MatchCollection matches = Regex.Matches(content, pattern);
+
+                foreach (Match match in matches)
                 {
-                    string line = reader.ReadLine();
-
-                    string[] words = line.Split(' ');
-
-                    foreach (string word in words)
-                    {
-                        if (word.Contains('z'))
-                        {
-                            resStr += word + " ";
-                        }
-
-                    }
+                    result += match.Value + " ";
                 }
             }
-            return resStr;
+
+            return result.Trim();
         }
     }
 }
