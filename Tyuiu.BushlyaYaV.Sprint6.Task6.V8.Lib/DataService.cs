@@ -8,22 +8,26 @@ namespace Tyuiu.BushlyaYaV.Sprint6.Task6.V8.Lib
     {
         public string CollectTextFromFile(string str, string path)
         {
-            string result = string.Empty;
-
-            if (File.Exists(path))
+            string resStr = "";
+            using (StreamReader reader = new StreamReader(path))
             {
-                string content = File.ReadAllText(path);
-
-                string pattern = @"\b\w*z\w*\b";
-                MatchCollection matches = Regex.Matches(content, pattern);
-
-                foreach (Match match in matches)
+                while (!reader.EndOfStream)
                 {
-                    result += match.Value + " ";
+                    string line = reader.ReadLine();
+
+                    string[] words = line.Split(' ');
+
+                    foreach (string word in words)
+                    {
+                        if (word.Contains('z'))
+                        {
+                            resStr += word + " ";
+                        }
+
+                    }
                 }
             }
-
-            return result.Trim();
+            return resStr;
         }
     }
 }

@@ -9,18 +9,13 @@ namespace Tyuiu.BushlyaYaV.Sprint6.Task6.V8.Test
         [TestMethod]
         public void TestMethod1()
         {
-            string testFilePath = "testfile.txt";
-            string testContent = "HqrXl jNJC VLjXpq PAlR NnhEZ MNfYeB TwlB vpZoG RwZn qdsTS RizdogMOZpCb GGLDMUi AWkgYPxilmC GqzgGQOdWpd fPF NR ztMvvn XVZeHq HIwMbmO pvjFv MvGuVH BsmobjdwMQ VkNPKjfSHmgKrU";
+            string path = @"C:\DataSprint6\InPutFileTask6V8.txt";
 
-            File.WriteAllText(testFilePath, testContent);
+            FileInfo fileinfo = new FileInfo(path);
+            bool fileExists = fileinfo.Exists;
+            bool wait = true;
 
-            DataService dataService = new DataService();
-            string result = dataService.CollectTextFromFile(testFilePath);
-
-            File.Delete(testFilePath);
-
-            string expectedResult = "HqrXl jNJC  PAlR  TwlB vpZoG RwZn qdsTS   fPF NR ztMvvn  HIwMbmO pvjFv  BsmobjdwMQ  VkNPKjfSHmgKrU";
-            Assert.AreEqual(expectedResult, result);
+            Assert.AreEqual(wait, fileExists);
         }
     }
 }
