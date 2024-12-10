@@ -9,6 +9,8 @@ public partial class FormMain : Form
     {
         InitializeComponent();
     }
+    string openFilePath;
+    DataService ds = new DataService();
 
     private void buttonFileExpress_BYV_Click(object sender, EventArgs e)
     {
