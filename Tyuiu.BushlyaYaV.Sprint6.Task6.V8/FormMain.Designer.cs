@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMain));
             panel1 = new Panel();
             buttonHelp_BYV = new Button();
@@ -42,10 +43,8 @@
             panel4 = new Panel();
             groupBoxOutput_BYV = new GroupBox();
             textBoxOutputData_BYV = new TextBox();
-            openFileDialog1 = new OpenFileDialog();
-            openFileDialog2 = new OpenFileDialog();
-            openFileDialog3 = new OpenFileDialog();
-            openFileDialog4 = new OpenFileDialog();
+            openFileDialogTask_BYV = new OpenFileDialog();
+            toolTip1 = new ToolTip(components);
             panel1.SuspendLayout();
             panel2.SuspendLayout();
             groupBoxTask_BYV.SuspendLayout();
@@ -74,6 +73,7 @@
             buttonHelp_BYV.Name = "buttonHelp_BYV";
             buttonHelp_BYV.Size = new Size(75, 69);
             buttonHelp_BYV.TabIndex = 2;
+            toolTip1.SetToolTip(buttonHelp_BYV, "Информация о программе ");
             buttonHelp_BYV.UseVisualStyleBackColor = true;
             buttonHelp_BYV.Click += buttonHelp_BYV_Click;
             // 
@@ -84,6 +84,7 @@
             buttonFile_BYV.Name = "buttonFile_BYV";
             buttonFile_BYV.Size = new Size(75, 63);
             buttonFile_BYV.TabIndex = 1;
+            toolTip1.SetToolTip(buttonFile_BYV, "Производит поиск в фале вхождений сиволов \"z\"");
             buttonFile_BYV.UseVisualStyleBackColor = true;
             buttonFile_BYV.Click += buttonFile_BYV_Click;
             // 
@@ -94,6 +95,7 @@
             buttonFileExpress_BYV.Name = "buttonFileExpress_BYV";
             buttonFileExpress_BYV.Size = new Size(75, 63);
             buttonFileExpress_BYV.TabIndex = 0;
+            toolTip1.SetToolTip(buttonFileExpress_BYV, "Открыть файл");
             buttonFileExpress_BYV.UseVisualStyleBackColor = true;
             buttonFileExpress_BYV.Click += buttonFileExpress_BYV_Click;
             // 
@@ -187,21 +189,9 @@
             textBoxOutputData_BYV.Size = new Size(418, 343);
             textBoxOutputData_BYV.TabIndex = 0;
             // 
-            // openFileDialog1
+            // openFileDialogTask_BYV
             // 
-            openFileDialog1.FileName = "openFileDialog1";
-            // 
-            // openFileDialog2
-            // 
-            openFileDialog2.FileName = "openFileDialog2";
-            // 
-            // openFileDialog3
-            // 
-            openFileDialog3.FileName = "openFileDialog3";
-            // 
-            // openFileDialog4
-            // 
-            openFileDialog4.FileName = "openFileDialog4";
+            openFileDialogTask_BYV.FileName = "openFileDialog1";
             // 
             // FormMain
             // 
@@ -243,9 +233,7 @@
         private Panel panel4;
         private GroupBox groupBoxOutput_BYV;
         private TextBox textBoxOutputData_BYV;
-        private OpenFileDialog openFileDialog1;
-        private OpenFileDialog openFileDialog2;
-        private OpenFileDialog openFileDialog3;
-        private OpenFileDialog openFileDialog4;
+        private OpenFileDialog openFileDialogTask_BYV;
+        private ToolTip toolTip1;
     }
 }

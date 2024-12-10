@@ -41,6 +41,7 @@
             buttonOK_BYV.TabIndex = 0;
             buttonOK_BYV.Text = "ОК";
             buttonOK_BYV.UseVisualStyleBackColor = true;
+            buttonOK_BYV.Click += buttonOK_BYV_Click;
             // 
             // label1
             // 
