@@ -2,7 +2,6 @@
 
 
 namespace Tyuiu.BushlyaYaV.Sprint6.Task6.V8;
-using Tyuiu.BushlyaYaV.Sprint6.Task6.V8.Lib;
 
 public partial class FormMain : Form
 {
