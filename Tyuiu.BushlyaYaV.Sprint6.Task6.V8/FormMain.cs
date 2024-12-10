@@ -34,7 +34,7 @@ namespace Tyuiu.BushlyaYaV.Sprint6.Task6.V8
                     textBoxIn_BYV.AppendText(line + Environment.NewLine);
                 }
                 groupBoxInfoEnter_BYV.Text += " " + openFilePath;
-                buttonOutput_V8.Enabled = true;
+                buttonOutput_BYV.Enabled = true;
             }
             catch
             {
